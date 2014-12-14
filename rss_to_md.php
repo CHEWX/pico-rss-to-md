@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RSS to MD *
+ * RSS to Markdown *
  * @package Pico
  * @subpackage Rss_to_md
  * @version 1.0
@@ -94,7 +94,7 @@ class Rss_to_md {
                 $permalink = seoUrl($title);
                 $rssLink = $node->getElementsByTagName('link')->item(0)->nodeValue;
 
-                $postMd = fopen('content/medium/'.$permalink.".md", "w") or die("Unable to open file!");
+                $postMd = fopen('content/'.$permalink.".md", "w") or die("Unable to open file!");
                 // open meta
                 $content = "/*\n";
                 fwrite($postMd, $content);
